@@ -26,13 +26,6 @@ urlpatterns = [
     path('about/', TemplateView.as_view(template_name="About.html")),
     path('contact/', TemplateView.as_view(template_name="Contact.html")),
     path('login/', TemplateView.as_view(template_name="index.html")),
-    path(route='login', view=views.login_user, name='login'),
-    path(route='logout', view=views.logout_request, name='logout'),
-    path(route='register', view=views.registration, name='register'),
     path('register/', TemplateView.as_view(template_name="index.html")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-    path(route='login', view=views.login_user, name='login'),
-    path(route='logout', view=views.logout_request, name='logout'),
-    path(route='register', view=views.registration, name='register'),
-    path('register/', TemplateView.as_view(template_name="index.html")),
