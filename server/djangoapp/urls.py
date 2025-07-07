@@ -6,13 +6,8 @@ from django.conf import settings
 
 app_name = 'djangoapp'
 urlpatterns = [
-    # # path for registration
-
-    # path for login
-    # path(route='login', view=views.login_user, name='login'),
-
-    # path for dealer reviews view
-
-    # path for add a review view
-
+    path(route='login', view=views.login_user, name='login'),
+    path(route='logout', view=views.logout_request, name='logout'),
+    path(route='register', view=views.registration, name='register'),
+    path(route='get_cars', view=views.get_cars, name='getcars'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
